@@ -1,0 +1,31 @@
+import win.ui;
+/*DSG{{*/
+mainForm = win.form(text="aardio-webview2-template";right=759;bottom=469)
+mainForm.add()
+/*}}*/
+
+//如果运行或发布遇到问题，请先卸载 WebView2 再运行示例以更新该组件。
+import web.view;
+var theView  = web.view(mainForm); 
+ 
+// 导出为Javascript中的 aardio 对象
+theView.external = {
+    getResult = function(param){
+        return 'aardio with 传参：' + param; 
+    }; 
+}
+ 
+import wsock.tcp.simpleHttpServer; 
+
+var url
+if (_STUDIO_INVOKED) {
+	import web.rest.client;
+	url = "http://localhost:3000/web/"
+} else {
+	import wsock.tcp.simpleHttpServer
+	url = wsock.tcp.simpleHttpServer.startUrl("/web/index.html")
+}
+theView.go(url)
+
+mainForm.show();
+win.loopMessage();

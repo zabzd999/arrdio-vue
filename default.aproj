@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project ver="10" name="aardio-webview2-template" libEmbed="true" icon="..." ui="win" output="wincc-analysis.exe" CompanyName="aardio" FileDescription="aardio-webview2-template" LegalCopyright="Copyright (C) 作者 2022" ProductName="aardio-webview2-template" InternalName="aardio-webview2-template" FileVersion="0.0.0.02" ProductVersion="0.0.0.02" publishDir="/dist/" dstrip="false">
+	<file name="main" path="main.aardio"/>
+	<folder name="窗体" path="forms" comment="" embed="true" local="false" ignored="false"/>
+	<folder name="网页" path="web" embed="true" comment="目录" local="true" ignored="false"/>
+	<folder name="网页源码" path="web.src" embed="false" comment="目录" local="false" ignored="true"/>
+</project>
